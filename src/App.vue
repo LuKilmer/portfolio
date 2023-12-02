@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Header from './components/Header.vue';
 import Home from './components/Home.vue';
 import Footer from './components/Footer.vue';
 import Skill from './components/Skills.vue'
 import Projects from './components/Projects.vue';
+import Header from './components/Header.vue';
 </script>
   
 <template>
@@ -14,5 +14,6 @@ import Projects from './components/Projects.vue';
   <Footer></Footer>
 </template>
 
-<style scoped>
+<style >
+
 </style>
