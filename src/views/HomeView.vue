@@ -1,25 +1,24 @@
 <script lang="ts">
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
 import ProjectList from '../components/ProjectList.vue';
+import Sobre from '../components/Sobre.vue';
+import Filosofia from '../components/Filosofia.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    Header,
-    Footer,
-    ProjectList
+    ProjectList,
+    Sobre,
+    Filosofia
   }
 });
 </script>
 
 <template>
 
-<Header/>
+<Sobre/>
 <ProjectList/>
-<Footer/>
-
+<Filosofia/>
 </template>
 
 <style scoped>

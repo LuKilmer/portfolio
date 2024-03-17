@@ -43,6 +43,7 @@
             .then(data => {
               if (id.value !== null && id.value <= data.projetos.length) {
                 objeto.value = data.projetos[id.value - 1];
+                document.title = objeto.value.nome !== undefined ? objeto.value.nome : 'Título Padrão';
               }
             })
             .catch(error => {

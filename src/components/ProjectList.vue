@@ -32,10 +32,13 @@ export default defineComponent({
 </script>
 
 <template>
-  <h2>Projetos</h2>
+  <div id="projetos">
+    <h2>Projetos</h2>
   <ul>
     <li v-for="projeto in projetos" :key="projeto.id"><Project :objeto="projeto"/></li>
-  </ul>
+  </ul> 
+  </div>
+  
 </template>
 
 <style scoped>
