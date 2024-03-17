@@ -1,5 +1,8 @@
 <template>
+  <div>
     <h3>{{ objeto.nome }}</h3>
+    <router-link :to="'/project/' + objeto.id">{{"link to "+objeto.nome}}</router-link>
+  </div>
 </template>
 
 <script lang="ts">

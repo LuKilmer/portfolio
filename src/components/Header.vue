@@ -17,10 +17,10 @@ export default defineComponent({
     <header>
         <nav>
             <ul>
-                <li><a href="#">Página Inicial</a></li>
+                <li><RouterLink to="/">Go to Home</RouterLink></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
-                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
         <button @click="toggleDark()">Toggle Color Mode</button>

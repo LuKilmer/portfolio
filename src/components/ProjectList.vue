@@ -12,11 +12,11 @@ export default defineComponent({
   setup() {
     const projetos = ref<Projeto[]>([]);
     onMounted(() => {
-      fetch('http://localhost:3000/projetos')
+      fetch('https://lukilmer.github.io/portfolio/src/assets/json/projects.json')
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          projetos.value = data;
+          projetos.value = data.projetos;
         })
         .catch(error => {
           console.error('Erro ao carregar dados:', error);
