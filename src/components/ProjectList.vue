@@ -5,6 +5,8 @@ import Project from './Project.vue';
 interface Projeto {
   id: number;
   nome: string;
+  descricao: string;
+  imagem: string;
 }
 
 export default defineComponent({
@@ -12,11 +14,11 @@ export default defineComponent({
   setup() {
     const projetos = ref<Projeto[]>([]);
     onMounted(() => {
-      fetch('https://lukilmer.github.io/portfolio/src/assets/json/projects.json')
+      fetch('http://localhost:3000/projetos/')
         .then(response => response.json())
         .then(data => {
-          console.log(data);
-          projetos.value = data.projetos;
+          
+          projetos.value = data;
         })
         .catch(error => {
           console.error('Erro ao carregar dados:', error);
@@ -42,5 +44,11 @@ export default defineComponent({
 </template>
 
 <style scoped>
-/* Estilos específicos do componente */
+#projetos{
+  padding-top:60px;
+  width:70%;
+}
+li{
+  list-style: none;
+}
 </style>

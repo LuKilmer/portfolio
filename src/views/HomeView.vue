@@ -2,24 +2,28 @@
 import ProjectList from '../components/ProjectList.vue';
 import Sobre from '../components/Sobre.vue';
 import Filosofia from '../components/Filosofia.vue';
+import Home from '../components/Home.vue';
 import { defineComponent } from 'vue';
 
+
 export default defineComponent({
-  name: 'Home',
+  name: 'HomeView',
   components: {
     ProjectList,
     Sobre,
-    Filosofia
+    Filosofia,
+    Home
   }
 });
 </script>
 
 <template>
-
-<Sobre/>
-<ProjectList/>
-<Filosofia/>
+  <Home/>
+  <Sobre/>
+  <ProjectList/>
+  <Filosofia/>
 </template>
 
 <style scoped>
+
 </style>

@@ -1,12 +1,15 @@
-.dark{
+.dark *{
   background-color: rgb(24, 24, 24);
   color:rgb(245, 245, 245);
-
-
+  margin:0;
+  width:100%;
 }
 *{
   background-color: rgb(245, 245, 245);
   color: rgb(24, 24, 24);
+ 
+  margin:0;
+  width:100%;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 

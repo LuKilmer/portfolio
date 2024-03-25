@@ -20,7 +20,6 @@ export default defineComponent({
   methods: {
     scrollToProjetos() {
       const route = router;
-      console.log(route);
       if(route!=undefined){
         route.push('/').then(() => {
         const projetosElement = document.getElementById('projetos');
@@ -29,7 +28,40 @@ export default defineComponent({
         }
       });
       }
+    },
+    scrollToSobre() {
+      const route = router;
+      if(route!=undefined){
+        route.push('/').then(() => {
+        const projetosElement = document.getElementById('sobre');
+        if (projetosElement) {
+          projetosElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+      }
+    },
+    scrollToHome() {
+      const route = router;
       
+      if(route!=undefined){
+        route.push('/').then(() => {
+        const projetosElement = document.getElementById('home');
+        if (projetosElement) {
+          projetosElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+      }
+    },
+    scrollToFilosofia() {
+      const route = router;
+      if(route!=undefined){
+        route.push('/').then(() => {
+        const projetosElement = document.getElementById('filosofia');
+        if (projetosElement) {
+          projetosElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+      }
     }
   }
 });
@@ -39,10 +71,10 @@ export default defineComponent({
     <header>
         <nav>
             <ul>
-              <li><RouterLink class="color1" to="/" @click="scrollToProjetos"> Home</RouterLink></li>
-              <li><a class="color2" href="#sobre">Sobre</a></li>
-              <li><a class="color3" href="#projetos">Projetos</a></li>
-              <li><a class="color4" href="#filosofia">Filosofia</a></li>
+              <li><RouterLink class="color1" to="/" @click="scrollToHome"> Home</RouterLink></li>
+              <li><RouterLink class="color2" to="/" @click="scrollToSobre">Sobre</RouterLink></li>
+              <li><RouterLink class="color3" to="/" @click="scrollToProjetos">Projetos</RouterLink></li>
+              <li><RouterLink class="color4" to="/" @click="scrollToFilosofia">Filosofia</RouterLink></li>
             </ul>
         </nav>
         
@@ -63,19 +95,21 @@ header{
   overflow: hidden;
   font-weight: 500;
   color: #fff; 
-  padding: 10px 10px;
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   z-index: 1000; 
 }
 .dark header{
   background-color:rgb(24,24,24);
   color: rgb(245,245,245);
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Sombra para efeito de elevação */
 }
+
+
 ul{
   list-style-type: none;
   display: flex;
-  margin:auto;
+  justify-content: left;
+  
   padding:0;
 }
 .dark ul{
@@ -89,12 +123,12 @@ ul{
 
 li{
   text-align: center;
-  margin:5px;
+
 
 }
 a{
   text-decoration: none;
-  padding:2px;
+  
   
 }
 .sun{
@@ -103,40 +137,67 @@ a{
 .moon{
   background-color:rgb(24,24,24);
 }
-a:hover{
-  color:rgb(253, 153, 81);
-  border-bottom: 3px solid rgb(253, 153, 81);
+.color1:hover{
+  color:rgb(232, 113, 28);
+  border-bottom: 4px solid rgb(232, 113, 28);
 }
+.dark .color1:hover{
+  color:rgb(248, 209, 10);
+  border-bottom: 4px solid rgb(248, 209, 10);
+}
+.color2:hover{
+  color:rgb(235, 109, 255);
+  border-bottom: 4px solid rgb(235, 109, 255);
+}
+.dark .color2:hover{
+  color:rgb(205, 26, 26);
+  border-bottom: 4px solid rgb(205, 26, 26);
+}
+.color3:hover{
+  color:rgb(70, 181, 60);
+  border-bottom: 4px solid rgb(70, 181, 60);
+}
+.dark .color3:hover{
+  color:rgb(62, 163, 222);
+  border-bottom: 4px solid rgb(62, 163, 222);
+}
+.color4:hover{
+  color:rgb(206, 48, 119);
+  border-bottom: 4px solid rgb(206, 48, 119);
+}
+.dark .color4:hover{
+  color:rgb(156, 51, 231);
+  border-bottom: 4px solid rgb(156, 51, 231);
+}
+
 button div{
+  font-size:22px;
   padding:5px;
   border-radius: 50%;
 }
 
 button{
-  padding-right:20px;
+ 
   cursor:pointer;
   border:none;
   background-color:rba(24,24,24);
+  width:50px;
+  
 }
 
 .dark button{
-  background-color:currentColor;
+  background-color:rba(24,24,24);
 }
 @media only screen and (min-width: 400px) and (max-width: 620px) {
   a {
-    font-size:26px;
+    font-size:20px;
   }
-  button{
-    font-size:25px;
-  }
+  
 
 }
 @media only screen and (min-width: 620px) and (max-width: 1000px) {
   a {
     font-size:16px;
-  }
-  button{
-    font-size:15px;
   }
 
 }
